@@ -1,0 +1,32 @@
+{
+  "name": "shortens-url",
+  "version": "1.0.0",
+  "description": "Encurtador de URL",
+  "main": "./src/server.ts",
+  "scripts": {
+    "dev": "ts-node-dev --watch ./src --transpileOnly --ignore-watch node_modules ./src/server.ts",
+    "build": "tsc",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/edsonvitor42/shortens-url.git"
+  },
+  "author": "Edson Soares",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/edsonvitor42/shortens-url/issues"
+  },
+  "homepage": "https://github.com/edsonvitor42/shortens-url#readme",
+  "devDependencies": {
+    "@types/express": "^4.17.6",
+    "@types/mongoose": "^5.7.28",
+    "ts-node-dev": "^1.0.0-pre.49",
+    "typescript": "^3.9.5"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongodb": "^3.5.9",
+    "mongoose": "^5.9.20"
+  }
+}
