@@ -1,0 +1,7 @@
+/_scripts
+/node_modules
+.devcontainer
+docker-compose.yaml
+Dockerfile
+Dockerfile-dev
+.env

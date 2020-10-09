@@ -1,0 +1,22 @@
+version: '3.8'
+services:
+  shortens-url:
+    build:
+      context: .
+      dockerfile: Dockerfile-dev
+    working_dir: /home/shortens-url
+    image: shortens-url:latest
+    volumes:
+      - .:/home/shortens-url
+    container_name: shortens-url
+    ports:
+      - ${NODE_PORT}:${NODE_PORT}
+    restart: on-failure
+    environment: 
+      NODE_ENV: ${NODE_ENV}
+      NODE_PORT: ${NODE_PORT}
+      MONGO_DB_USER: ${MONGO_DB_USER}
+      MONGO_DB_PASSWORD: ${MONGO_DB_PASSWORD}
+      MONGO_DB_HOST: ${MONGO_DB_HOST}
+      MONGO_DB_DATABASE: ${MONGO_DB_DATABASE}
+    command: ["/bin/bash", "-c", "npm install && npm run dev"]
